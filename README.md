@@ -30,3 +30,5 @@ To run this system, please follow these preliminary steps:
 
 This repository is intended solely for academic study and research purposes. **Commercial use of this project is strictly prohibited.**
 
+##Acknowledgements
+I extend my sincere gratitude to the developer of [RAGQnASystem](https://github.com/honeyandme/RAGQnASystem) for the valuable contributions and inspiration.
