@@ -4,7 +4,7 @@ This project presents a comprehensive system for a Retrieval-Augmented Generatio
 
 ## Introduction
 
-This system innovatively combines knowledge graphs with the Chroma vector database to significantly reduce the computational complexity of searching relevant documents. We leverage a knowledge graph to structure medical information and utilize Large Language Model -driven Cypher query generation to automatically identify the correct subject area for a given query. This approach allows us to then efficiently search for documents within a specific, pre-defined subject database, rather than performing a computationally intensive search across the entire corpus. This focused retrieval strategy greatly improves the speed and precision of information delivery.
+This system innovatively combines knowledge graph with the Chroma vector database to reduce the computational complexity of searching relevant documents. We leverage a knowledge graph to structure medical information and utilize Large Language Model-driven Cypher query generation to automatically identify the correct subject area for a given query. This approach allows us to then efficiently search for documents within a specific, pre-defined subject database, rather than performing a computationally intensive search across the entire corpus. This focused retrieval strategy greatly improves the speed and precision of information delivery.
 
 ### System Architecture
 
