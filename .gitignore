@@ -1,0 +1,10 @@
+Frontend/medchatbot-system/node_modules/
+Frontend/medchatbot-system/public/live2d/models/
+Backend/BertBasedModel/
+Backend/Docker/chromadb/data/
+Backend/Docker/mongodb/data/
+Backend/Models/AnalysisModels/cache/
+Backend/Models/AnalysisModels/data/ner_data_aug.json
+Backend/resource/tmp/
+Backend/db.sqlite3
+Backend/Models/AnalysisModels/data/augment_data/

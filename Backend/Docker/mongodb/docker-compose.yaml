@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: docker.1ms.run/mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: your_secure_password
+    volumes:
+      - ./data:/data/db

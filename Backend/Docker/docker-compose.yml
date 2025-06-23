@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  mongodb:
+    image: docker.1ms.run/mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./mongodb/data:/data/db
+
+  chromadb:
+    image: docker.1ms.run/chromadb/chroma:latest
+    container_name: chromadb
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      CHROMA_PERSIST_DIR: /data
+      IS_PERSISTENT: "TRUE"
+      ALLOW_RESET: "TRUE"
+      CHROMA_SERVER_HOST: "localhost"
+      CHROMA_SERVER_HTTP_PORT: "8000"
+    volumes:
+      - ./chromadb/data:/data
+
+  redis:
+    image: docker.1ms.run/redis:latest
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis/data:/data
+    command: redis-server --save 60 1 --loglevel warning  # 持久化配置
+

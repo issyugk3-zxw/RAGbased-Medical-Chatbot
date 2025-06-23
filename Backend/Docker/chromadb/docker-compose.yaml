@@ -1,0 +1,24 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./mongodb/data:/data/db
+
+  chromadb:
+    image:  docker.1ms.run/chromadb/chroma:latest
+    container_name: chromadb
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      IS_PERSISTENT: "TRUE"
+      ALLOW_RESET: "TRUE"
+    volumes:
+      - ./chromadb/data:/chroma/chroma
